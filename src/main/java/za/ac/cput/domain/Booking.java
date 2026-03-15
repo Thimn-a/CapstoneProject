@@ -16,6 +16,7 @@ public class Booking {
     private String studentNumber;
     private String subjectCode;
     private String tutorId;
+    private Payment payment;
 
     private Booking() {
 
@@ -30,6 +31,7 @@ public class Booking {
         this.studentNumber = builder.studentNumber;
         this.subjectCode = builder.subjectCode;
         this.tutorId = builder.tutorId;
+        this.payment = builder.payment;
 
 
     }
@@ -66,6 +68,9 @@ public class Booking {
         return tutorId;
     }
 
+    public Payment getPayment(){
+        return payment;
+    }
 
     @Override
     public String toString() {
@@ -77,7 +82,8 @@ public class Booking {
                 "\nDuration: " + duration +
                 "\nStudent Number: " + studentNumber +
                 "\nSubject Code: " + subjectCode +
-                "\nTutor Id: " + tutorId;
+                "\nTutor Id: " + tutorId +
+                "\nPayment: " + payment;
     }
 
     public static class Builder {
@@ -89,6 +95,7 @@ public class Booking {
         private String studentNumber;
         private String subjectCode;
         private String tutorId;
+        private Payment payment;
 
         public Builder copy(Booking booking) {
             this.bookingId = booking.bookingId;
@@ -99,40 +106,54 @@ public class Booking {
             this.studentNumber = booking.studentNumber;
             this.subjectCode = booking.subjectCode;
             this.tutorId = booking.tutorId;
+            this.payment = booking.payment;
             return this;
         }
 
 
-        public void setBookingId(String bookingId) {
+        public Builder setBookingId(String bookingId) {
             this.bookingId = bookingId;
+            return this;
         }
 
-        public void setSessionId(String sessionId) {
+        public Builder setSessionId(String sessionId) {
             this.sessionId = sessionId;
+            return this;
         }
 
-        public void setSessionTime(String sessionTime) {
+        public Builder setSessionTime(String sessionTime) {
             this.sessionTime = sessionTime;
+            return this;
         }
 
-        public void setSessionType(String sessionType) {
+        public Builder setSessionType(String sessionType) {
             this.sessionType = sessionType;
+            return this;
         }
 
-        public void setDuration(String duration) {
+        public Builder setDuration(String duration) {
             this.duration = duration;
+            return this;
         }
 
-        public void setStudentNumber(String studentNumber) {
+        public Builder setStudentNumber(String studentNumber) {
             this.studentNumber = studentNumber;
+            return this;
         }
 
-        public void setSubjectCode(String subjectCode) {
+        public Builder setSubjectCode(String subjectCode) {
             this.subjectCode = subjectCode;
+            return this;
         }
 
-        public void setTutorId(String tutorId) {
+        public Builder setTutorId(String tutorId) {
             this.tutorId = tutorId;
+            return this;
+        }
+
+        public Builder setPayment(Payment payment){
+            this.payment = payment;
+            return this;
         }
 
         public Booking build() {

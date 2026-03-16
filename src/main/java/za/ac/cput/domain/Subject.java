@@ -18,11 +18,11 @@ public class Subject {
     private Subject() {
     }
 
-    private Subject(Builder bulider){
-        this.subjectCode = bulider.subjectCode;
-        this.subjectName = bulider.subjectName;
-        this.subjectDescription = bulider.subjectDescription;
-        this.gradeLevel = bulider.gradeLevel;
+    private Subject(Builder builder){
+        this.subjectCode = builder.subjectCode;
+        this.subjectName = builder.subjectName;
+        this.subjectDescription = builder.subjectDescription;
+        this.gradeLevel = builder.gradeLevel;
     }
 
     public String getSubjectCode() {
@@ -84,7 +84,7 @@ public class Subject {
             this.gradeLevel = subject.gradeLevel;
             return this;
         }
-        public Subject bulid(){
+        public Subject build(){
             return new Subject(this);
         }
     }

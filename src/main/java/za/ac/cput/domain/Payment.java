@@ -5,20 +5,20 @@ Payment.java
 Payment domain class
 Author: Safiya Elmi
 (240500598)
-Date: 16 March 2026
+Date: 22 March 2026
 */
 
 public class Payment {
     private String paymentRef;
-    private String amount;
+    private double amount;
     private String paymentDate;
     private String paymentMethod;
     private String status;
 
-    private Payment(){
+    public Payment() {
     }
 
-    private Payment(Builder builder){
+    private Payment(Builder builder) {
         this.paymentRef = builder.paymentRef;
         this.amount = builder.amount;
         this.paymentDate = builder.paymentDate;
@@ -30,7 +30,7 @@ public class Payment {
         return paymentRef;
     }
 
-    public String getAmount() {
+    public double getAmount() { 
         return amount;
     }
 
@@ -56,9 +56,9 @@ public class Payment {
                 "\nStatus: " + status;
     }
 
-    public static class Builder{
+    public static class Builder {
         private String paymentRef;
-        private String amount;
+        private double amount;  
         private String paymentDate;
         private String paymentMethod;
         private String status;
@@ -68,7 +68,7 @@ public class Payment {
             return this;
         }
 
-        public Builder setAmount(String amount) {
+        public Builder setAmount(double amount) {  
             this.amount = amount;
             return this;
         }
@@ -88,7 +88,7 @@ public class Payment {
             return this;
         }
 
-        public Builder copy(Payment payment){
+        public Builder copy(Payment payment) {
             this.paymentRef = payment.paymentRef;
             this.amount = payment.amount;
             this.paymentDate = payment.paymentDate;
@@ -97,7 +97,7 @@ public class Payment {
             return this;
         }
 
-        public Payment build(){
+        public Payment build() {
             return new Payment(this);
         }
     }

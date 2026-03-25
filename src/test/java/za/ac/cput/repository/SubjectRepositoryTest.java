@@ -54,4 +54,9 @@ class SubjectRepositoryTest {
         assertTrue(repository.delete(subject.getSubjectCode()));
         System.out.println("This Subject has been deleted");
     }
+
+    @Test
+    void e_getAll() {
+        System.out.println(repository.getAll());
+    }
 }

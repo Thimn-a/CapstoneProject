@@ -34,13 +34,13 @@ class StudentRepositoryTest {
     }
     @Test
     void c_update() {
-        Student newRecord = new Student.Builder()
+        Student newStudent = new Student.Builder()
                 .copy(student)
                 .setPhoneNumber("082 889 2236")         //updating the student's phone number
                 .setPassword("Help12546@@")             //updating the password also
                 .build();
 
-        Student updated = repository.update(newRecord);
+        Student updated = repository.update(newStudent);
         assertNotNull(updated);
         System.out.println(updated);
     }

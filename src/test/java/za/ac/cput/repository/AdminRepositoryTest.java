@@ -28,7 +28,7 @@ public class AdminRepositoryTest {
     }
     @Test
     void b_read() {
-        Admin read = repository.read(admin.getId());
+        Admin read = repository.read(admin.getAdminId());
         assertNotNull(read);
         System.out.println(read.toString());
     }
@@ -45,7 +45,7 @@ public class AdminRepositoryTest {
     @Test
     @Disabled
     void d_delete() {
-        assertTrue(repository.delete(admin.getId()));
+        assertTrue(repository.delete(admin.getAdminId()));
         System.out.println("Admin has been deleted successfully");
     }
     @Test

@@ -42,7 +42,7 @@ public class AdminRepository implements IAdminRepository {
     @Override
     public Admin read(String adminId) {
         for (Admin admin : adminList) {
-            if (admin.getId().equals(adminId)) {
+            if (admin.getAdminId().equals(adminId)) {
                 return admin;
             }
         }
@@ -51,7 +51,7 @@ public class AdminRepository implements IAdminRepository {
 
     @Override
     public Admin update(Admin admin) {
-        String adminId = admin.getId();
+        String adminId = admin.getAdminId();
         Admin oldAdmin = read(adminId);
 
         if (oldAdmin == null) {

@@ -5,8 +5,8 @@ import za.ac.cput.domain.Payment;
 import java.util.List;
 
 /*
-PaymentRepository.java
-Payment repository
+IPaymentService.java
+Payment service
 Author: Safiya Elmi
 (240500598)
 Date: 22/06/2026

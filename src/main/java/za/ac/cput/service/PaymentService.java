@@ -18,15 +18,16 @@ Date: 22/06/2026
 @Service
 public class PaymentService implements IPaymentService {
 
-  private PaymentRepository repository;
+    private PaymentRepository repository;
 
-  @Autowired PaymentService(PaymentRepository repository){
-      this.repository = repository;
-  }
+    @Autowired
+    public PaymentService(PaymentRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     public Payment create(Payment payment) {
-      return this.repository.save(payment);
+        return this.repository.save(payment);
     }
 
     @Override
@@ -44,6 +45,7 @@ public class PaymentService implements IPaymentService {
         this.repository.deleteById(paymentRef);
         return true;
     }
+
     @Override
     public List<Payment> getAll() {
         return this.repository.findAll();

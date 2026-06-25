@@ -28,11 +28,11 @@ class StudentFactoryTest {
                 "ADP362S", "Online", "2 hours", "T987654",
                 LocalDateTime.of(2026, 5, 20 , 10, 30));
 
-        bookings.add(booking);
+        List<Booking> bookings = List.of(booking);
 
-        Student student = StudentFactory.createStudent("220094489","John",
-                "Doe","220094489@mycput.ac.za","073 985 1110",
-                "JohnDoe2026","Third year", bookings);
+        Student student = StudentFactory.createStudent("220094489","Sabelo",
+                "Ceza","220094489@mycput.ac.za","073 985 1110",
+                "SabieCeza2026","Third year", bookings);
         assertNotNull(student);
         System.out.println(student);
     }

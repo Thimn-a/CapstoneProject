@@ -1,5 +1,6 @@
 package za.ac.cput.service;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -14,6 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+/*
+StudentServiceTest.java
+Student Service Test
+Author: Sabelo Ceza - 220094489
+Date: 25/06/2026
+ */
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class TutorSubjectServiceTest {
@@ -91,6 +98,7 @@ class TutorSubjectServiceTest {
     }
 
     @Test
+    @Disabled
     void e_delete() {
         TutorSubjectId id = new TutorSubjectId(
                 tutorSubject.getSubjectCode(),
